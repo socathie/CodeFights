@@ -1,2 +1,2 @@
 # CodeFights
-Codes for Code Arcade in CodeFights (python)
+Codes for CodeFights (python)
