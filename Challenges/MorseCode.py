@@ -1,3 +1,31 @@
+L2M = {'A': '._',     'B': '_...',   'C': '_._.', 
+        'D': '_..',    'E': '.',      'F': '.._.',
+        'G': '__.',    'H': '....',   'I': '..',
+        'J': '.___',   'K': '_._',    'L': '._..',
+        'M': '__',     'N': '_.',     'O': '___',
+        'P': '.__.',   'Q': '__._',   'R': '._.',
+     	'S': '...',    'T': '_',      'U': '.._',
+        'V': '..._',   'W': '.__',    'X': '_.._',
+        'Y': '_.__',   'Z': '__..'
+       }
+
+M2L= dict((v,k) for (k,v) in L2M.items())
+
+def MorseCode(message, key):
+    key = key.split(' ')
+    print M2L[key[0]]
+    shift = ord(M2L[key[0]])-ord('C')
+    print shift
+    s = ''
+    w = message.split('  ')
+    for i in range(len(w)):
+        l = w[i].split(' ')
+        for j in range(len(l)):
+            temp = str(chr((ord(M2L[l[j]])-shift-ord('A'))%26+ord('A')))
+            s += temp
+        s += ' '
+    return s[:-1]
+ 
 '''Morse code is a method of transmitting text information as a series of on-off tones, lights, or clicks. For more information, please read here.
 
 Many of you might have watched a great movie called "The Imitation Game". For those of you who haven't, the movie is about cracking the enigma code during the WWII. In this challenge you're facing a similar problem.
@@ -36,32 +64,3 @@ Constraints:
 [output] string
 
 Decrypted message consisting of uppercase English letters 'A'-'Z'.'''
-
-L2M = {'A': '._',     'B': '_...',   'C': '_._.', 
-        'D': '_..',    'E': '.',      'F': '.._.',
-        'G': '__.',    'H': '....',   'I': '..',
-        'J': '.___',   'K': '_._',    'L': '._..',
-        'M': '__',     'N': '_.',     'O': '___',
-        'P': '.__.',   'Q': '__._',   'R': '._.',
-     	'S': '...',    'T': '_',      'U': '.._',
-        'V': '..._',   'W': '.__',    'X': '_.._',
-        'Y': '_.__',   'Z': '__..'
-       }
-
-M2L= dict((v,k) for (k,v) in L2M.items())
-
-def MorseCode(message, key):
-    key = key.split(' ')
-    print M2L[key[0]]
-    shift = ord(M2L[key[0]])-ord('C')
-    print shift
-    s = ''
-    w = message.split('  ')
-    for i in range(len(w)):
-        l = w[i].split(' ')
-        for j in range(len(l)):
-            temp = str(chr((ord(M2L[l[j]])-shift-ord('A'))%26+ord('A')))
-            s += temp
-        s += ' '
-    return s[:-1]
- 
