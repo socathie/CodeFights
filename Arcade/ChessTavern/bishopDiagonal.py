@@ -19,7 +19,7 @@ def bishopDiagonal(bishop1, bishop2):
             bishop2 = chr(ord(bishop2[0])+1)+str(int(bishop2[1])-1)
         return sorted([bishop1,bishop2])
 
-In the Land Of Chess, bishops don't really like each other. In fact, when two bishops happen to stand on the same diagonal, they immediately rush towards the opposite ends of that same diagonal.
+'''In the Land Of Chess, bishops don't really like each other. In fact, when two bishops happen to stand on the same diagonal, they immediately rush towards the opposite ends of that same diagonal.
 
 Given the initial positions (in chess notation) of two bishops, bishop1 and bishop2, calculate their future positions. Keep in mind that bishops won't move unless they see each other along the same diagonal.
 
@@ -49,4 +49,4 @@ Coordinates of the second bishop in the same notation.
 
 [output] array.string
 
-Coordinates of the bishops in lexicographical order after they check the diagonals they stand on.
+Coordinates of the bishops in lexicographical order after they check the diagonals they stand on.'''
