@@ -1,3 +1,21 @@
+def areSimilar(A, B):
+    if A==B:
+        return True
+    i = 0
+    while i<len(A):
+        if A[i]==B[i]:
+            A.pop(i)
+            B.pop(i)
+        else:
+            i += 1
+    if len(A)!=2:
+        return False
+    B.reverse()
+    if A==B:
+        return True
+    else:
+        return False
+
 '''Two arrays are called similar if one can be obtained from another by swapping at most one pair of elements.
 
 Given two arrays, check whether they are similar.
