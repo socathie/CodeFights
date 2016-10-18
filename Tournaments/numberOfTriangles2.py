@@ -6,5 +6,5 @@ def numberOfTriangles2(sticks):
             for k in range(j+1,len(sticks)):
                 if sticks[k]+sticks[j]>sticks[i]:
                     cnt += 1
-                    print sticks[i],sticks[j],sticks[k]
+
     return cnt
