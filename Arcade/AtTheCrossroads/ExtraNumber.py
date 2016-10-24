@@ -26,7 +26,7 @@
 def extraNumber(a, b, c):
     if a==b:
         return c
-    else if a==c:
+    elif a==c:
         return b
     else:
         return a
