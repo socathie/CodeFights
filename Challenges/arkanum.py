@@ -1,3 +1,17 @@
+#def arkanum(ingredients, products, inventory):
+#    results = [[inventory,[]]]
+#    while 1:
+#        temp = []
+#        for x in results:
+#            for i in range(len(ingredients)):
+#                m = [a-b for a,b in zip(x[0],ingredients[i])]
+#                if all(item >= 0 for item in m):
+#                    temp += [[[a+b for a,b in zip(m,products[i])],x[1]+[i]]]
+#                results = temp
+#                k = [a[1] for a in results if a[0][0]>0]
+#        if len(k) > 0:
+#            return k[0]
+
 def E(x,y):
     b = True
     for i in range(len(x)):
